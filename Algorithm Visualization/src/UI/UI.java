@@ -53,11 +53,11 @@ public class UI {
 	
 	public UI() {
 		frame = new JFrame();
-		frame.setPreferredSize(new Dimension(frameWidth, frameHeight));
+		frame.setSize(new Dimension(frameWidth, frameHeight));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		
-		panel = new VisualPanel();
+		panel = new VisualPanel(frame);
 		panel.setLayout(null);
 		panel.setVisible(true);
 		
@@ -342,7 +342,6 @@ public class UI {
 		panel.add(sortingAlgo);
 		
 		frame.add(panel);
-		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);	
 		
